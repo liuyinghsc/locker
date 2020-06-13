@@ -7,9 +7,16 @@ public class Locker {
 
     public Ticket save(Bag bag) {
         if(hasRoom) {
-            return new Ticket();
+            return new Ticket(true);
         } else {
             throw new LockerHasNoRoomException("Locker has no room!");
+        }
+    }
+    public Bag pickup(Ticket ticket) {
+        if (ticket.isValid()){
+            return new Bag();
+        }else {
+            return null;
         }
     }
 }

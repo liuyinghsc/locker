@@ -21,4 +21,14 @@ public class LockerTest {
         final Bag bag = new Bag();
         locker.save(bag);
     }
+
+    @Test
+    public void should_return_bag_when_pickup_bag_given_valid_ticket() {
+        final Locker locker = new Locker(true);
+
+        Ticket ticket = new Ticket(true);
+        Bag actual = locker.pickup(ticket);
+
+        assertNotNull(actual);
+    }
 }
