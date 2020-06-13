@@ -31,4 +31,15 @@ public class LockerTest {
 
         assertNotNull(actual);
     }
+
+    @Test(expected = InvalidTicketException.class )
+    public void should_failed_when_pickup_bag_given_invalid_ticket() {
+        final Locker locker = new Locker(true);
+
+        Ticket ticket = new Ticket(false);
+        locker.pickup(ticket);
+    }
+
+
+
 }

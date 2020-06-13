@@ -16,7 +16,7 @@ public class Locker {
         if (ticket.isValid()){
             return new Bag();
         }else {
-            return null;
+            throw  new InvalidTicketException("Invalid Ticket");
         }
     }
 }
