@@ -9,7 +9,7 @@ public class Locker {
         if(hasRoom) {
             return new Ticket();
         } else {
-            return null;
+            throw new LockerHasNoRoomException("Locker has no room!");
         }
     }
 }
