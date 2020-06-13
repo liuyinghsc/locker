@@ -14,6 +14,7 @@ public class Locker {
     }
     public Bag pickup(Ticket ticket) {
         if (ticket.isValid()){
+            ticket.setValid(false);
             return new Bag();
         }else {
             throw  new InvalidTicketException("Invalid Ticket");

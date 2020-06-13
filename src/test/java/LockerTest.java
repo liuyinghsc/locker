@@ -40,6 +40,13 @@ public class LockerTest {
         locker.pickup(ticket);
     }
 
+    @Test(expected = InvalidTicketException.class )
+    public void should_failed_when_pickup_bag_twice_given_valid_ticket() {
+        final Locker locker = new Locker(true);
 
+        Ticket ticket = new Ticket(true);
+        locker.pickup(ticket);
+        locker.pickup(ticket);
+    }
 
 }
