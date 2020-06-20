@@ -1,9 +1,11 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.junit.Test;
+
+import java.time.Instant;
 
 import static org.junit.Assert.assertNotNull;
 
 public class LockerTest {
-
     @Test
     public void should_return_ticket_when_save_bag_given_locker_has_room() {
         final Locker locker = new Locker(true);
@@ -12,6 +14,11 @@ public class LockerTest {
         Ticket actual = locker.save(bag);
 
         assertNotNull(actual);
+    }
+
+    @Test
+    public void should_return_ticket_when_save_bag_given_locker_has_not_room(){
+
     }
 
     @Test(expected = LockerHasNoRoomException.class )
@@ -48,5 +55,4 @@ public class LockerTest {
         locker.pickup(ticket);
         locker.pickup(ticket);
     }
-
 }
