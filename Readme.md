@@ -44,8 +44,7 @@ Task6:
 - When: Pick up bag twice
 - Then: Succeed in the first time and failed in the second time. Show failed message
 
-
-##section2
+## Section 2
 SmartLockerRobot
 
 ### Requirement
