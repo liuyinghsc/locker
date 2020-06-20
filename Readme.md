@@ -47,12 +47,7 @@ Task6:
 
 ##section2
 SmartLockerRobot
-Given SmartLockerRobot管理柜子1和柜子2，柜子1的剩余容量多，when 存物品，then 存柜子1，成功出票
-Given SmartLockerRobot管理柜子1和柜子2，柜子2的剩余容量多，when 存物品，then 存柜子2，成功出票
-Given SmartLockerRobot管理柜子1和柜子2，柜子1和柜子2容量一样，when 存物品，then 存柜子1，成功出票
-Given SmartLockerRobot管理柜子1和柜子2，柜子1和柜子2都满了，when 存物品，then 存失败
-Given SmartLockerRobot管理柜子1和柜子2，有效票，when 取物品，then 取成功
-Given SmartLockerRobot管理柜子1和柜子2，无效票，when 取物品，then 取失败
+
 ### Requirement
 - SmartLockerRobot Save
 - Pick up
